@@ -9,6 +9,8 @@ from rest_framework import serializers
 from topic.models import Topic
 from helpers.serializers import TimestampSerializer
 
+# TODO: Não permitir salvar url_name em branco
+
 
 class TopicSerializer(TimestampSerializer):
     author = serializers.PrimaryKeyRelatedField(
