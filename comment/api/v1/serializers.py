@@ -7,14 +7,13 @@ from rest_framework import serializers
 # Models
 ##
 from comment.models import Comment
+from helpers.serializers import TimestampSerializer
 
 
-class CommentSerializer(serializers.ModelSerializer):
+class CommentSerializer(TimestampSerializer):
     author = serializers.PrimaryKeyRelatedField(
         source="author.username", read_only=True
     )
-    date = serializers.DateTimeField(source="created_at", read_only=True)
-    updated = serializers.DateTimeField(source="updated_at", read_only=True)
 
     class Meta:
         model = Comment
