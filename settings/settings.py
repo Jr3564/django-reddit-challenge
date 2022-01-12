@@ -91,6 +91,7 @@ INSTALLED_APPS = [
     "corsheaders",
     # Applications
     "accounts",
+    "comment",
 ]
 
 SITE_ID = 1
