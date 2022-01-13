@@ -18,3 +18,4 @@ class TopicViewSet(viewsets.ModelViewSet):
     queryset = Topic.objects.all()
     serializer_class = TopicSerializer
     permission_classes = (permissions.IsAuthenticated,)
+    lookup_field = "url_name"
